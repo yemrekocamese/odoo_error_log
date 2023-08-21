@@ -2,14 +2,14 @@
     <!-- Main Menu -->
     <menuitem
             id="menu_root"
-            name="Error Logs"
+            name="Error"
             action="action_error"
             sequence="10"
             web_icon="error,static/description/icon.png"
     />
     <menuitem
             id="menu_error"
-            name="Error Logs"
+            name="Error"
             action="action_error"
             sequence="10"
             parent="menu_root"
