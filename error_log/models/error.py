@@ -6,7 +6,7 @@ class Error(models.Model):
     _description = "Error Logs"
     _order = "name"
 
-    name = fields.Text(required=True)
+    stacktrace = fields.Text(required=True)
     assigned = fields.Many2one("res.users", required=True, )
     is_ok = fields.Boolean()
     summary = fields.Char()
