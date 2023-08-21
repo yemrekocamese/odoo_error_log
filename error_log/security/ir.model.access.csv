@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_error_user,User,model_error,error_group_user,1,1,1,1
+access_error_user,User,model_error,base.group_user,1,1,1,1
 
