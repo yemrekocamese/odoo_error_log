@@ -9,7 +9,7 @@ class Error(models.Model):
     name = fields.Text(required=True)
     assigned = fields.Many2one("res.users", required=True, )
     is_ok = fields.Boolean()
-    summary = fields.Char()
+    summary = fields.Char(string="aciklama")
     active = fields.Boolean(default=True)
     comment = fields.Text()
     error_type = fields.Selection(
