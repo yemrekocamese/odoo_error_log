@@ -1,0 +1,38 @@
+<odoo>
+
+    <!-- Error tags Tree View -->
+    <record id="view_error_tags_tree" model="ir.ui.view">
+        <field name="name">error tags</field>
+        <field name="model">error.tags</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Error Tags Form View -->
+    <record id="view_error_tags_form" model="ir.ui.view">
+        <field name="name">Error Tags</field>
+        <field name="model">error.tags</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group id="main">
+                        <group id="left">
+                            <field name="name"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_Error_Tags" model="ir.actions.act_window">
+
+        <field name="name">Error Tags</field>
+        <field name="res_model">error</field>
+        <field name="res_model">error.tags</field>
+        <field name="view_mode">tree,form</field>
+
+    </record>
+</odoo>
