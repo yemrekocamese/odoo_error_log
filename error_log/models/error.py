@@ -7,6 +7,7 @@ class Error(models.Model):
     _order = "name"
 
     stacktrace = fields.Text(required=True)
+    name = fields.Char(string="Aciklama")
     assigned = fields.Many2one("res.users", required=True, )
     is_ok = fields.Boolean()
     summary = fields.Char(string="aciklama")
