@@ -6,7 +6,7 @@
         <field name="model">error</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
+                <field name="stacktrace"/>
                 <field name="error_type"/>
                 <field name="assigned"/>
                 <field name="is_ok"/>
@@ -32,7 +32,7 @@
                     />
                     <div class="oe_title">
                         <h1>
-                            <field name="name"/>
+                            <field name="stacktrace"/>
                         </h1>
                         <field
                                 name="error_type"
@@ -61,7 +61,7 @@
         <field name="arch" type="xml">
             <search string="Error Logs">
                 <field
-                        name="name"
+                        name="stacktrace"
                         filter_domain="[('name', 'ilike', self)]"
                         string="Name"
                 />

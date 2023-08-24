@@ -14,6 +14,20 @@
             sequence="10"
             parent="menu_root"
     />
+    <menuitem
+            id="menu_configuration"
+            name="Configuration"
+            sequence="10"
+            parent="menu_root"
+
+    />
+    <menuitem
+            id="menu_error_tags"
+            name="Error_tags"
+            action="action_Error_Tags"
+            sequence="15"
+            parent="menu_configuration"
+    />
 
 
 </odoo>
