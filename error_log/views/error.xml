@@ -47,6 +47,7 @@
                         </group>
                         <group id="right">
                             <field name="is_ok"/>
+                            <field name="tags" widget="many2many_tags"  />
                         </group>
                     </group>
                 </sheet>
