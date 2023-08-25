@@ -2,19 +2,19 @@ from odoo import api, fields, models
 
 
 class Error(models.Model):
-    _name = "error"
+    _name = "error_log.error" # TODO: isim değişicek
     _description = "Error Logs"
-    _order = "name"
+    _order = "name" # TODO: sıralama düzeltilecek.
 
     stacktrace = fields.Text(required=True)
+    # TODO: state eklenecek.
     name = fields.Char()
     assigned = fields.Many2one("res.partner", required=True, domain="[('category_id.name', 'in',['developer'])]")
     is_ok = fields.Boolean()
-    summary = fields.Char(string="aciklama")
+    summary = fields.Char(string="aciklama") # TODO: aciklama a--A.
     active = fields.Boolean(default=True)
     comment = fields.Text()
     tags = fields.Many2many("error.tags", required=True)
-
     error_type = fields.Selection(
         selection=[
             ("xml", "Xml"),
@@ -24,3 +24,5 @@ class Error(models.Model):
         ],
         required=True,
     )
+    # TODO: chatter eklenecek.
+    # TODO: required değişecek.

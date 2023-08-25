@@ -21,6 +21,7 @@
             parent="menu_root"
 
     />
+<!--  action="action_Error_Tags"  değişiecek  -->
     <menuitem
             id="menu_error_tags"
             name="Error_tags"
