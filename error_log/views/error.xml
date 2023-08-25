@@ -30,6 +30,7 @@
                             bg_color="bg-danger"
                             attrs="{'invisible': [('active', '=', True)]}"
                     />
+                    #TODO: state eklenecek. ömer
                     <div class="oe_title">
                         <h1>
                             <field name="stacktrace"/>
@@ -50,6 +51,7 @@
                             <field name="tags" widget="many2many_tags"  />
                         </group>
                     </group>
+                    #TODO: chatter eklenecek. yunus
                 </sheet>
             </form>
         </field>

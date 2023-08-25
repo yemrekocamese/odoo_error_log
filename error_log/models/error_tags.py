@@ -8,4 +8,4 @@ class Tags(models.Model):
 
     name = fields.Char(string="Error Tags")
     tags = fields.Char(string="Error Tags")
-    # TODO: color  eklenecek
+    # TODO: color  eklenecek ömer

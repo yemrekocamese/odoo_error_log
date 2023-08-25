@@ -21,6 +21,7 @@
                     <group id="main">
                         <group id="left">
                             <field name="name"/>
+                            #TODO: color  eklenecek. ömer
                         </group>
                     </group>
                 </sheet>
