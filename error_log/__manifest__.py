@@ -11,7 +11,7 @@
         "security/error_security.xml",
         "security/ir.model.access.csv",
         "views/error.xml",
-        "views/menu.xml",
         "views/error_tags.xml",
+        "views/menu.xml",
     ],
 }
