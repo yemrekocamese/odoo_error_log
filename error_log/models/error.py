@@ -2,7 +2,7 @@ from odoo import api, fields, models
 
 
 class Error(models.Model):
-    _name = "error"
+    _name = "error_log.error"
     _description = "Error Logs"
     _order = "name"
 
@@ -13,7 +13,7 @@ class Error(models.Model):
     summary = fields.Char(string="aciklama")
     active = fields.Boolean(default=True)
     comment = fields.Text()
-    tags = fields.Many2many("error.tags", required=True)
+    tags = fields.Many2many("error_tags.error", required=True)
 
     error_type = fields.Selection(
         selection=[

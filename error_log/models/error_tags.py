@@ -2,7 +2,7 @@ from odoo import api, fields, models
 
 
 class Error_tags(models.Model):
-    _name = "error.tags"
+    _name = "error_tags.error"
     _description = "Error tags"
     _order = "name"
 
