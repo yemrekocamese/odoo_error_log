@@ -8,3 +8,4 @@ class Error_tags(models.Model):
 
     name = fields.Char(string="Error Tags")
     tags = fields.Char(string="Error Tags")
+    color = fields.Integer(string='Color', default=0)
