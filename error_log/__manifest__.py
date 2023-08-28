@@ -3,7 +3,7 @@
     "summary": "This application keeps error logs.",
     "author": "Yunus Emre Kocameşe",
     "website": "https://kitayazilim.com/",
-    "depends": ["base"],
+    "depends": ["mail"],
     "category": "Services/Error",
     "application": True,
     "data": [

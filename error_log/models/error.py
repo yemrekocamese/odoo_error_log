@@ -4,6 +4,7 @@ from odoo import api, fields, models
 class Error(models.Model):
     _name = "error_log.error"
     _description = "Error Logs"
+    _inherit = ["mail.thread", "mail.activity.mixin"]
     _order = "name"
 
     stacktrace = fields.Text(required=True)
