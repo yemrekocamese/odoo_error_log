@@ -7,11 +7,11 @@ class Error(models.Model):
     _inherit = ["mail.thread", "mail.activity.mixin"]
     _order = "name"
 
+    name = fields.Char(string="Summary", compute='_compute_name')
     stacktrace = fields.Text(required=True)
-    name = fields.Char()
     assigned = fields.Many2one("res.partner", domain="[('category_id.name', 'in',['developer'])]")
     is_ok = fields.Boolean()
-    summary = fields.Char(string="Summary")
+
     active = fields.Boolean(default=True)
     comment = fields.Text()
     tags = fields.Many2many("error_tags.error")
@@ -23,3 +23,12 @@ class Error(models.Model):
             ("atama", "Atama"),
         ],
     )
+
+    @api.depends('stacktrace')
+    def _compute_name(self):
+        for rec in self:
+            #rec.name = rec.stacktrace and rec.stacktrace[:50] or 'Yeni'
+            if rec.stacktrace:
+                rec.name = rec.stacktrace[:50]
+            else:
+                rec.name = 'Yeni'
