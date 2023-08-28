@@ -21,6 +21,7 @@
                     <group id="main">
                         <group id="left">
                             <field name="name"/>
+                            <field name="color" widget="color_picker" />
                         </group>
                     </group>
                 </sheet>

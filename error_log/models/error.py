@@ -13,7 +13,7 @@ class Error(models.Model):
     summary = fields.Char(string="Summary")
     active = fields.Boolean(default=True)
     comment = fields.Text()
-    tags = fields.Many2many("error.tags")
+    tags = fields.Many2many("error_tags.error")
     error_type = fields.Selection(
         selection=[
             ("xml", "Xml"),
