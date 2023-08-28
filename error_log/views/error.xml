@@ -3,7 +3,7 @@
     <!-- Error Logs Tree View -->
     <record id="view_error_tree" model="ir.ui.view">
         <field name="name">error.tree</field>
-        <field name="model">error</field>
+        <field name="model">error_log.error</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="stacktrace"/>
@@ -19,7 +19,7 @@
     <!-- Animal Form View -->
     <record id="view_error_form" model="ir.ui.view">
         <field name="name">error.form</field>
-        <field name="model">error</field>
+        <field name="model">error_log.error</field>
         <field name="arch" type="xml">
             <form string="Error Logs">
                 <field name="active" invisible="1"/>
@@ -47,7 +47,8 @@
                         </group>
                         <group id="right">
                             <field name="is_ok"/>
-                            <field name="tags" widget="many2many_tags"/>
+                            <field name="tags" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                            <field name="summary"/>
                         </group>
                     </group>
                 </sheet>
@@ -67,7 +68,7 @@
     <!-- Search for error -->
     <record id="view_error_search" model="ir.ui.view">
         <field name="name">error.search</field>
-        <field name="model">error</field>
+        <field name="model">error_log.error</field>
         <field name="arch" type="xml">
             <search string="Error Logs">
                 <field
@@ -121,7 +122,7 @@
 
     <record id="action_error" model="ir.actions.act_window">
         <field name="name">Error Logs</field>
-        <field name="res_model">error</field>
+        <field name="res_model">error_log.error</field>
         <field name="view_mode">tree,form</field>
         <field name="search_view_id" ref="view_error_search"/>
         <field name="help" type="html">

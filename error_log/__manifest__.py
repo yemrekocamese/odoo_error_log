@@ -7,7 +7,6 @@
     "category": "Services/Error",
     "application": True,
     "data": [
-        "data/ir.module.category.csv",
         "security/error_security.xml",
         "security/ir.model.access.csv",
         "views/error.xml",
