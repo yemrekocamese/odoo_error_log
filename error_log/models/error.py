@@ -20,14 +20,19 @@ class Error(models.Model):
             ("xml", "Xml"),
             ("python", "Python"),
             ("javascript", "Javascript"),
-            ("atama", "Atama"),
+        ],
+    )
+    atama = fields.Selection(
+        selection=[
+            ("atandı", "Atandı"),
+            ("atanmadı", "Atanmadı"),
         ],
     )
 
     @api.depends('stacktrace')
     def _compute_name(self):
         for rec in self:
-            #rec.name = rec.stacktrace and rec.stacktrace[:50] or 'Yeni'
+            # rec.name = rec.stacktrace and rec.stacktrace[:50] or 'Yeni'
             if rec.stacktrace:
                 rec.name = rec.stacktrace[:50]
             else:
