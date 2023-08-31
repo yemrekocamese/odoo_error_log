@@ -9,7 +9,7 @@
                 <field name="stacktrace"/>
                 <field name="error_type"/>
                 <field name="assigned"/>
-                <field name="is_ok"/>
+                <field name="atama"/>
                 <field name="create_date"/>
                 <field name="create_uid" widget="many2one_avatar_user"/>
             </tree>
@@ -36,6 +36,11 @@
                         </h1>
                         <field
                                 name="error_type"
+                                widget="radio"
+                                options="{'horizontal': true}"
+                        />
+                        <field
+                                name="atama"
                                 widget="radio"
                                 options="{'horizontal': true}"
                         />
@@ -95,10 +100,16 @@
                         domain="[('error_type', '=', 'javascript')]"
                         name="javascript"
                 />
+                <separator/>
                 <filter
-                        string="Atama"
-                        domain="[('error_type', '=', 'atama')]"
-                        name="atama"
+                        string="Atandı"
+                        domain="[('atama', '=', 'atandı')]"
+                        name="atandı"
+                />
+                <filter
+                        string="Atanmadı"
+                        domain="[('atama', '=', 'atanmadı')]"
+                        name="atanamadı"
                 />
                 <separator/>
                 <filter
