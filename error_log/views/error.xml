@@ -16,7 +16,7 @@
         </field>
     </record>
 
-    <!-- Animal Form View -->
+    <!-- Error Log Form View -->
     <record id="view_error_form" model="ir.ui.view">
         <field name="name">error.form</field>
         <field name="model">error_log.error</field>
@@ -39,12 +39,12 @@
                                 widget="radio"
                                 options="{'horizontal': true}"
                         />
-                        <field
-                                name="atama"
-                                widget="radio"
-                                options="{'horizontal': true}"
-                        />
                     </div>
+                    <field
+                            name="atama"
+                            widget="radio"
+                            options="{'horizontal': true}"
+                    />
                     <group id="main">
                         <group id="left">
                             <field name="assigned"/>
