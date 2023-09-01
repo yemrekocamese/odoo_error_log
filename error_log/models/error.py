@@ -15,14 +15,14 @@ class Error(models.Model):
     active = fields.Boolean(default=True)
     comment = fields.Text()
     tags = fields.Many2many("error_tags.error")
-    error_type = fields.Selection(
+    error_type = fields.Selection(string="Error Türü",
         selection=[
             ("xml", "Xml"),
             ("python", "Python"),
             ("javascript", "Javascript"),
         ],
     )
-    atama = fields.Selection(
+    atama = fields.Selection(string="Atama Durumu",
         selection=[
             ("atandı", "Atandı"),
             ("atanmadı", "Atanmadı"),
